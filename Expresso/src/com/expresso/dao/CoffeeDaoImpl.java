@@ -23,10 +23,8 @@ public class CoffeeDaoImpl implements CoffeeDao {
 			cf.setId(resultSet.getInt("id"));
 			cf.setName(resultSet.getString("name"));
 			cf.setPrice(resultSet.getInt("price"));
-			
-
 			coffeeList.add(cf);
-			System.out.println(cf.toString());
+			//System.out.println(cf.toString());
 		}
 		con.close();
 
