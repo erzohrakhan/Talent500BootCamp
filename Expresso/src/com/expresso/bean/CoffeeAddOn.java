@@ -1,6 +1,7 @@
 package com.expresso.bean;
 
 public class CoffeeAddOn {
+	private int id;
 	private String addOnType;
 	private int price;
 	public String getAddOnType() {
@@ -14,6 +15,13 @@ public class CoffeeAddOn {
 	}
 	public void setPrice(int price) {
 		this.price = price;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	@Override
 	public String toString() {

@@ -40,8 +40,9 @@ public class CustomerPrestImpl implements CustomerPrest {
 			}
 		} catch (SQLException e) {
 			System.out.println("Something went wrong. Try again!");
-			new SystemUtil().exit();
-			//e.printStackTrace();
+			e.printStackTrace();
+//			new SystemUtil().exit();
+			
 		}
 		
 		System.out.println("Hi "+ customer.getName() +" !");

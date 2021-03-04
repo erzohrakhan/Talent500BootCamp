@@ -19,5 +19,17 @@ public class Order {
 		this.addOnList = addOnList;
 	}
 	
+	public void addCoffee(Coffee coffee) {
+		if (coffeeList == null)
+			coffeeList = new ArrayList<Coffee>();
+		coffeeList.add(coffee);
+	}
+	
+	public void addAddOn(CoffeeAddOn addOn) {
+		if (addOnList == null)
+			addOnList = new ArrayList<CoffeeAddOn>();
+		addOnList.add(addOn);
+	}
+	
 
 }
