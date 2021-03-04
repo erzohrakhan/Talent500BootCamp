@@ -1,6 +1,6 @@
 package com.expresso.presentation;
 
-public interface CoffeePresentation {
+public interface CoffeePrest {
 	public void showMenu();
 	public void onOptionsItemSelected(int option);
 	

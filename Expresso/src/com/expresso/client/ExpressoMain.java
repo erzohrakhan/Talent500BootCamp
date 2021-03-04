@@ -2,14 +2,14 @@ package com.expresso.client;
 
 import java.sql.SQLException;
 
-import com.expresso.presentation.CoffeePresentation;
-import com.expresso.presentation.CoffeePresentationImpl;
+import com.expresso.presentation.CoffeePrest;
+import com.expresso.presentation.CoffeePrestImpl;
 import com.expresso.service.CoffeeService;
 import com.expresso.service.CoffeeServiceImpl;
 
 public class ExpressoMain {
 	public static void main(String[] args) {
-		CoffeePresentation coffeePres = new CoffeePresentationImpl();
+		CoffeePrest coffeePres = new CoffeePrestImpl();
 		System.out.println("--------------------------------------------");
 		System.out.println("Welcome to Expresso Caffe");
 		coffeePres.showMenu();

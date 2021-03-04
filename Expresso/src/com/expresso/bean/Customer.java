@@ -3,6 +3,18 @@ package com.expresso.bean;
 public class Customer {
 	private String name;
 	private String phoneNo;
+	
+	
+	public Customer(String name, String phoneNo) {
+		this.name = name;
+		this.phoneNo = phoneNo;
+	}
+	
+	public Customer(String phoneNo) {
+		this.name = "Anonymous";
+		this.phoneNo = phoneNo;
+	}
+	
 	public String getName() {
 		return name;
 	}

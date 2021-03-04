@@ -1,6 +1,6 @@
 package com.expresso.presentation;
 
-public class CoffeePresentationImpl implements CoffeePresentation{
+public class CoffeePrestImpl implements CoffeePrest{
 	
 	public void showMenu() {
 		
