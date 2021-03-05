@@ -2,30 +2,36 @@ package com.expresso.bean;
 
 public class CoffeeAddOn {
 	private int id;
-	private String addOnType;
+	private String name;
 	private int price;
-	public String getAddOnType() {
-		return addOnType;
+
+	public String getName() {
+		return name;
 	}
-	public void setAddOnType(String addOnType) {
-		this.addOnType = addOnType;
+
+	public void setName(String name) {
+		this.name = name;
 	}
+
 	public int getPrice() {
 		return price;
 	}
+
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	
+
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	@Override
 	public String toString() {
-		return "CoffeeAddOn [addOnType=" + addOnType + ", price=" + price + "]";
+		return "CoffeeAddOn [addOnType=" + name + ", price=" + price + "]";
 	}
-	
+
 }

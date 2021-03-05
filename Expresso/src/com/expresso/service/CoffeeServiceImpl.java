@@ -14,12 +14,4 @@ public class CoffeeServiceImpl implements CoffeeService{
 	public ArrayList<Coffee> getAllRecords() throws SQLException {
 		return coffeeDao.getAllRecords();
 	}
-
-	@Override
-	public int getCoffeePriceByName() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	
-
 }

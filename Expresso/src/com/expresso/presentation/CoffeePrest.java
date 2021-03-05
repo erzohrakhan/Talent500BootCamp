@@ -1,9 +1,10 @@
 package com.expresso.presentation;
 
 import com.expresso.bean.Coffee;
+import com.expresso.bean.Customer;
 
 public interface CoffeePrest {
-	public void showMenu();
+	public void showMenu(Customer customer);
 	public void showAddOnMenu();
 	Coffee onOptionsItemSelected(int option, String Size);
 

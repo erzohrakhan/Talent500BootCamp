@@ -1,24 +1,16 @@
 package com.expresso.presentation;
 
 import java.sql.SQLException;
-import java.util.Optional;
 import java.util.Scanner;
 
 import com.expresso.bean.Customer;
 import com.expresso.service.CustomerService;
 import com.expresso.service.CustomerServiceImpl;
 import com.expresso.util.ScannerUtil;
-import com.expresso.util.SystemUtil;
 
 public class CustomerPrestImpl implements CustomerPrest {
 	CoffeePrest coffeePrest = new CoffeePrestImpl();
 	CustomerService customerServ = new CustomerServiceImpl();
-
-	@Override
-	public void enterDetails() {
-		// TODO Auto-generated method stub
-
-	}
 
 	@Override
 	public void getCustomerDetails() {
@@ -47,7 +39,7 @@ public class CustomerPrestImpl implements CustomerPrest {
 		
 		System.out.println("Hi "+ customer.getName() +" !");
 		
-		coffeePrest.showMenu();
+		coffeePrest.showMenu(customer);
 
 	}
 

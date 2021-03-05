@@ -20,8 +20,8 @@ public class CustomerDaoImpl implements CustomerDao{
 		PreparedStatement st = con.prepareStatement("INSERT INTO CUSTOMER(NAME,PHONE_NO) VALUES(?,?)");
 		st.setString(1, customer.getName());
 		st.setString(2, customer.getPhoneNo());
-		int rows = st.executeUpdate();
-		System.out.println("rows " + rows);
+		st.executeUpdate();
+		//System.out.println("rows " + rows);
 		con.close();
 		
 	}
@@ -40,7 +40,7 @@ public class CustomerDaoImpl implements CustomerDao{
 			
 
 			customerList.add(cf);
-			System.out.println(cf.toString());
+			//System.out.println(cf.toString());
 		}
 		con.close();
 

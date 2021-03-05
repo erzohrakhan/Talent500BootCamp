@@ -5,6 +5,8 @@ import java.util.ArrayList;
 public class Order {
 	ArrayList<Coffee> coffeeList;
 	ArrayList<CoffeeAddOn> addOnList;
+	DiscountVoucher disVoucher;
+	Customer customer;
 	
 	public ArrayList<Coffee> getCoffeeList() {
 		return coffeeList;
@@ -31,5 +33,16 @@ public class Order {
 		addOnList.add(addOn);
 	}
 	
-
+	public DiscountVoucher getDisVoucher() {
+		return disVoucher;
+	}
+	public void setDisVoucher(DiscountVoucher disVoucher) {
+		this.disVoucher = disVoucher;
+	}
+	public Customer getCustomer() {
+		return customer;
+	}
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
 }

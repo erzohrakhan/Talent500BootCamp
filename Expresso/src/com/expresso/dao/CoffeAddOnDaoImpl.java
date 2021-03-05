@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import com.expresso.bean.CoffeeAddOn;
 import com.expresso.util.SqlConnectionUtil;
 
-public class CoffeAddonDaoImpl implements CoffeeAddonDao {
+public class CoffeAddOnDaoImpl implements CoffeeAddOnDao {
 	Connection con = null;
 
 	@Override
@@ -21,7 +21,7 @@ public class CoffeAddonDaoImpl implements CoffeeAddonDao {
 		while (resultSet.next()) {
 			CoffeeAddOn ca = new CoffeeAddOn();
 			ca.setId(resultSet.getInt("id"));
-			ca.setAddOnType(resultSet.getString("type"));
+			ca.setName(resultSet.getString("type"));
 			ca.setPrice(resultSet.getInt("price"));
 
 			coffeeAddOnList.add(ca);

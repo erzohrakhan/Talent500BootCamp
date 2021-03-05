@@ -22,7 +22,7 @@ DROP TABLE IF EXISTS `addon`;
 CREATE TABLE `addon` (
   `id` int NOT NULL AUTO_INCREMENT,
   `type` varchar(45) DEFAULT NULL,
-  `price` int DEFAULT 0,
+  `price` int,
   PRIMARY KEY (`id`),
   UNIQUE KEY `ADDON_TYPE` (`type`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
@@ -30,14 +30,13 @@ CREATE TABLE `addon` (
 DROP TABLE IF EXISTS `bill`;
 CREATE TABLE `bill` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `bill_date` varchar(50) NOT NULL,
+  `bill_date` date NOT NULL,
   `totalvalue` int NOT NULL,
-  `discount_voucher_id` int,
+  `discount_voucher` varchar(50),
   `netvalue` int,
   `totalbill` int,
   `customer_id` int,
   PRIMARY KEY (`id`),
-  FOREIGN KEY(`discount_voucher_id`) REFERENCES `discount_voucher`(`id`),
   FOREIGN KEY(`customer_id`) REFERENCES `customer`(`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
@@ -48,8 +47,6 @@ CREATE TABLE `bill_details` (
 `addon_name` varchar(45),
 `bill_id` int,
 PRIMARY KEY (`id`),
-FOREIGN KEY(`coffee_type_id`) REFERENCES `coffee_type`(`id`),
-FOREIGN KEY(`addon_id`) REFERENCES `addon`(`id`),
 FOREIGN KEY(`bill_id`) REFERENCES `bill`(`id`)
 )ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
@@ -57,7 +54,7 @@ DROP TABLE IF EXISTS `discount_voucher`;
 
 CREATE TABLE `discount_voucher` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `voucher` varchar(128) DEFAULT NULL,
+  `voucher` varchar(50) DEFAULT NULL,
   `discount_rate` int,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
