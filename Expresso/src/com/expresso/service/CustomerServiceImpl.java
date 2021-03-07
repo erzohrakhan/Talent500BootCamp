@@ -21,25 +21,8 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public Customer getCustomerByPhoneNumber(String number) throws SQLException {
-//		Customer customer = null;
-////		customer = 
-////				getAllRecords().stream().filter(cust -> cust.getPhoneNo().equals(number)).findFirst();
-//
-//		List<Customer> customerList = getAllRecords();
-//		for (Customer cust : customerList) {
-//			if (cust.getPhoneNo().compareTo(number) == 0) {
-//				customer = cust;
-//				break;
-//			}
-//		}
-//		return customer;
 		return customerDao.getCustomerByPhoneNumber(number);
 
-	}
-
-	@Override
-	public List<Customer> getAllRecords() throws SQLException {
-		return customerDao.getAllRecords();
 	}
 
 }

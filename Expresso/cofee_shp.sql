@@ -10,7 +10,7 @@ INSERT INTO `addon` (`type`, `price`) VALUES ('Choclate', 80);
 INSERT INTO `addon` (`type`, `price`) VALUES ('Cream   ', 70);
 INSERT INTO `addon` (`type`, `price`) VALUES ('Hazelnut', 150);
 
-INSERT INTO `discount_voucher` (`voucher`, `discount_rate`) VALUES ('101', 5);
-INSERT INTO `discount_voucher` (`voucher`, `discount_rate`) VALUES ('01011', 10);
-INSERT INTO `discount_voucher` (`voucher`, `discount_rate`) VALUES ('01', 2);
-INSERT INTO `discount_voucher` (`voucher`, `discount_rate`) VALUES ('11', 3);
+INSERT INTO `discount_voucher` (`voucher`, `discount_rate`) VALUES ('1234', 5);
+INSERT INTO `discount_voucher` (`voucher`, `discount_rate`) VALUES ('4567', 10);
+INSERT INTO `discount_voucher` (`voucher`, `discount_rate`) VALUES ('7890', 2);
+INSERT INTO `discount_voucher` (`voucher`, `discount_rate`) VALUES ('1263', 3);

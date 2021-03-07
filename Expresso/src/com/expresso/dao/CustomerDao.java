@@ -7,7 +7,6 @@ import com.expresso.bean.Customer;
 
 public interface CustomerDao {
 	public void saveCustomerDetails(Customer customer) throws SQLException;
-	public List<Customer> getAllRecords() throws SQLException;
 	public Customer getCustomerByPhoneNumber(String number) throws SQLException;
 
 }

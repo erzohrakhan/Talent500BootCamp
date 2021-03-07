@@ -11,11 +11,12 @@ public class Bill {
 	private int totalBill;
 	private int gst;
 	private int serviceTax;
+	private int customer_id;
 
 	public Bill() {
 	}
 
-	public Bill(int totalValue, int discount, int netValue, int totalBill, int gst, int serviceTax) {
+	public Bill(int totalValue, int discount, int netValue, int totalBill, int gst, int serviceTax, int customer_id) {
 	
 		this.totalValue = totalValue;
 		this.discount = discount;
@@ -23,6 +24,7 @@ public class Bill {
 		this.totalBill = totalBill;
 		this.gst = gst;
 		this.serviceTax = serviceTax;
+		this.customer_id = customer_id;
 	}
 
 	public Date getDate() {
@@ -80,4 +82,21 @@ public class Bill {
 	public void setServiceTax(int serviceTax) {
 		this.serviceTax = serviceTax;
 	}
+
+	public int getCustomer_id() {
+		return customer_id;
+	}
+
+	public void setCustomer_id(int customer_id) {
+		this.customer_id = customer_id;
+	}
+
+	@Override
+	public String toString() {
+		return "Bill [date=" + date + ", totalValue=" + totalValue + ", discount=" + discount + ", netValue=" + netValue
+				+ ", totalBill=" + totalBill + ", gst=" + gst + ", serviceTax=" + serviceTax + ", customer_id="
+				+ customer_id + "]";
+	}
+	
+	
 }

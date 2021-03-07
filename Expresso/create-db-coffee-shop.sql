@@ -34,23 +34,15 @@ CREATE TABLE `bill` (
   `id` int NOT NULL AUTO_INCREMENT,
   `bill_date` date NOT NULL,
   `totalvalue` int NOT NULL,
-  `discount_voucher` varchar(50),
+  `discount` int,
   `netvalue` int,
   `totalbill` int,
+  `gst` int,
+  `service_tax` int,
   `customer_id` int,
   PRIMARY KEY (`id`),
   FOREIGN KEY(`customer_id`) REFERENCES `customer`(`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
-
-DROP TABLE IF EXISTS `bill_details`;
-CREATE TABLE `bill_details` (
-`id` int NOT NULL AUTO_INCREMENT,
-`coffee_type_name` varchar(50),
-`addon_name` varchar(45),
-`bill_id` int,
-PRIMARY KEY (`id`),
-FOREIGN KEY(`bill_id`) REFERENCES `bill`(`id`)
-)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 DROP TABLE IF EXISTS `discount_voucher`;
 

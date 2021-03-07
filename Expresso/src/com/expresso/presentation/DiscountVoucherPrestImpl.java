@@ -25,7 +25,8 @@ public class DiscountVoucherPrestImpl implements DiscountVoucherPrest {
 		choice = in.next().toUpperCase();
 		if (choice.equals("Y")) {
 			System.out.println("Voucher no:");
-			String voucher = in.next().toUpperCase();
+			String voucher = in.next();
+			System.out.println("Voucher   " + voucher);
 			try {
 				dis = disServ.findDiscountVoucherByName(voucher);
 				if (dis == null) {
