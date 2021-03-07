@@ -1,9 +1,9 @@
 Use expresso;
 
-INSERT INTO `coffee_type` (`name`, `price`) VALUES ('Americano', 150);
-INSERT INTO `coffee_type` (`name`, `price`) VALUES ('Expresso ', 250);
-INSERT INTO `coffee_type` (`name`, `price`) VALUES ('Latte    ', 200);
-INSERT INTO `coffee_type` (`name`, `price`) VALUES ('Mocha    ', 175);
+INSERT INTO `coffee_type` (`name`, `price_small`, `price_med`, `price_large`) VALUES ('Americano', 150,200,250);
+INSERT INTO `coffee_type` (`name`, `price_small`, `price_med`, `price_large`) VALUES ('Expresso ', 250, 300, 350);
+INSERT INTO `coffee_type` (`name`, `price_small`, `price_med`, `price_large`) VALUES ('Latte    ', 200, 250, 300);
+INSERT INTO `coffee_type` (`name`, `price_small`, `price_med`, `price_large`) VALUES ('Mocha    ', 175, 225, 275);
 
 INSERT INTO `addon` (`type`, `price`) VALUES ('Cashew  ', 100);
 INSERT INTO `addon` (`type`, `price`) VALUES ('Choclate', 80);

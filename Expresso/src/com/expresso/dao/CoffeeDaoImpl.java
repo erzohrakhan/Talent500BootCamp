@@ -22,19 +22,14 @@ public class CoffeeDaoImpl implements CoffeeDao {
 			Coffee cf = new Coffee();
 			cf.setId(resultSet.getInt("id"));
 			cf.setName(resultSet.getString("name"));
-			cf.setPrice(resultSet.getInt("price"));
+			cf.setPrice_small(resultSet.getInt("price_small"));
+			cf.setPrice_med(resultSet.getInt("price_med"));
+			cf.setPrice_large(resultSet.getInt("price_large"));
 			coffeeList.add(cf);
-			//System.out.println(cf.toString());
 		}
 		con.close();
 
 		return coffeeList;
-	}
-
-	@Override
-	public int getCoffeePriceByName() {
-		// TODO Auto-generated method stub
-		return 0;
 	}
 
 }

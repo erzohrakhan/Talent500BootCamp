@@ -6,8 +6,6 @@ public class Bill {
 
 	private Date date;
 	private int totalValue;
-//	private String discntVoucher;
-//	private int discntRate;
 	private int discount;
 	private int netValue;
 	private int totalBill;
@@ -18,7 +16,7 @@ public class Bill {
 	}
 
 	public Bill(int totalValue, int discount, int netValue, int totalBill, int gst, int serviceTax) {
-		//this.date = date;
+	
 		this.totalValue = totalValue;
 		this.discount = discount;
 		this.netValue = netValue;
@@ -42,14 +40,6 @@ public class Bill {
 	public void setTotalValue(int totalValue) {
 		this.totalValue = totalValue;
 	}
-
-//	public String getDiscntVoucher() {
-//		return discntVoucher;
-//	}
-//
-//	public void setDiscntVoucher(String discntVoucher) {
-//		this.discntVoucher = discntVoucher;
-//	}
 
 	public int getDiscount() {
 		return discount;

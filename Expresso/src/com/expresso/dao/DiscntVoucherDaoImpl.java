@@ -5,7 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.expresso.bean.Customer;
 import com.expresso.bean.DiscountVoucher;
 import com.expresso.util.SqlConnectionUtil;
 
@@ -16,7 +15,7 @@ public class DiscntVoucherDaoImpl implements DiscntVoucherDao {
 	public DiscountVoucher findDiscountVoucherByName(String voucher) throws SQLException {
 		DiscountVoucher disVoucher = null;
 		con = SqlConnectionUtil.getConnection();
-		PreparedStatement stmt = con.prepareStatement("SELECT * FROM DISCOUNT_VOUCHER WHERE VOUCHER =" +voucher);
+		PreparedStatement stmt = con.prepareStatement("SELECT * FROM DISCOUNT_VOUCHER WHERE VOUCHER ="+voucher);
 		ResultSet resultSet = stmt.executeQuery();
 		while (resultSet.next()) {
 			disVoucher = new DiscountVoucher();
@@ -25,6 +24,7 @@ public class DiscntVoucherDaoImpl implements DiscntVoucherDao {
 			disVoucher.setDiscountRate(resultSet.getInt("discount_rate"));
 
 		}
+		con.close();
 		return disVoucher;
 	}
 

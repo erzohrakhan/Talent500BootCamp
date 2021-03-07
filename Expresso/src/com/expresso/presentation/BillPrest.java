@@ -1,7 +1,8 @@
 package com.expresso.presentation;
 
 import com.expresso.bean.Order;
+import com.expresso.bean.OrderList;
 
 public interface BillPrest {
-	void showBillInvoice(Order order);
+	void showBillInvoice(OrderList orderList);
 }

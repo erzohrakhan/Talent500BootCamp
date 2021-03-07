@@ -25,7 +25,7 @@ public class DiscountVoucher {
 		return id;
 	}
 
-	public void setId(int i) {
-		this.id = i;
+	public void setId(int id) {
+		this.id = id;
 	}
 }

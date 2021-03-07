@@ -6,6 +6,7 @@ import com.expresso.bean.Bill;
 import com.expresso.bean.Coffee;
 import com.expresso.bean.CoffeeAddOn;
 import com.expresso.bean.Order;
+import com.expresso.bean.OrderList;
 import com.expresso.dao.BillDao;
 import com.expresso.dao.BillDaoImpl;
 
@@ -18,20 +19,17 @@ public class BillServiceImpl implements BillService {
 	}
 
 	@Override
-	public Bill calculateBill(Order order) {
+	public Bill calculateBill(OrderList orderList) {
 		int sum = 0;
 		int discount = 0;
 		// Date date = new Date(System.currentTimeMillis());
 
-		for (Coffee cf : order.getCoffeeList()) {
-			sum += cf.getPrice();
+		for (Order order : orderList.getOrderList()) {
+			sum += order.getPrice();
 		}
 
-		for (CoffeeAddOn addOn : order.getAddOnList()) {
-			sum += addOn.getPrice();
-		}
-		if (order.getDisVoucher() != null)
-			discount = sum * order.getDisVoucher().getDiscountRate() / 100;
+		if (orderList.getDisVoucher() != null)
+			discount = sum * orderList.getDisVoucher().getDiscountRate() / 100;
 		int netValue = sum - discount;
 		int gst = (int) (netValue * GST);
 		int servTax = (int) (netValue * SERVICE_TAX);

@@ -2,7 +2,7 @@ DROP SCHEMA IF EXISTS `Expresso`;
 
 CREATE SCHEMA `Expresso`;
 
-use `Expresso`;
+USE `Expresso`;
 
 SET FOREIGN_KEY_CHECKS = 0;
 
@@ -11,7 +11,9 @@ DROP TABLE IF EXISTS `coffee_type`;
 CREATE TABLE `coffee_type` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
-  `price` int DEFAULT 0,
+  `price_small` int DEFAULT 0,
+  `price_med` int DEFAULT 0,
+  `price_large` int DEFAULT 0,
   UNIQUE KEY `COFFEE_NAME` (`name`),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;

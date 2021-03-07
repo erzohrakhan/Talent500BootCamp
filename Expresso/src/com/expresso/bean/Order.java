@@ -1,48 +1,20 @@
 package com.expresso.bean;
 
-import java.util.ArrayList;
-
 public class Order {
-	ArrayList<Coffee> coffeeList;
-	ArrayList<CoffeeAddOn> addOnList;
-	DiscountVoucher disVoucher;
-	Customer customer;
+	String orderName;
+	int price;
 	
-	public ArrayList<Coffee> getCoffeeList() {
-		return coffeeList;
+	public String getOrderName() {
+		return orderName;
 	}
-	public void setCoffeeList(ArrayList<Coffee> coffeeList) {
-		this.coffeeList = coffeeList;
+	public void setOrderName(String orderName) {
+		this.orderName = orderName;
 	}
-	public ArrayList<CoffeeAddOn> getAddOnList() {
-		return addOnList;
+	public int getPrice() {
+		return price;
 	}
-	public void setAddOnList(ArrayList<CoffeeAddOn> addOnList) {
-		this.addOnList = addOnList;
+	public void setPrice(int price) {
+		this.price = price;
 	}
 	
-	public void addCoffee(Coffee coffee) {
-		if (coffeeList == null)
-			coffeeList = new ArrayList<Coffee>();
-		coffeeList.add(coffee);
-	}
-	
-	public void addAddOn(CoffeeAddOn addOn) {
-		if (addOnList == null)
-			addOnList = new ArrayList<CoffeeAddOn>();
-		addOnList.add(addOn);
-	}
-	
-	public DiscountVoucher getDisVoucher() {
-		return disVoucher;
-	}
-	public void setDisVoucher(DiscountVoucher disVoucher) {
-		this.disVoucher = disVoucher;
-	}
-	public Customer getCustomer() {
-		return customer;
-	}
-	public void setCustomer(Customer customer) {
-		this.customer = customer;
-	}
 }

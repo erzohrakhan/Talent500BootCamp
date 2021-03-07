@@ -7,6 +7,4 @@ import com.expresso.bean.Coffee;
 
 public interface CoffeeDao {
 	public ArrayList<Coffee> getAllRecords() throws SQLException;
-	public int getCoffeePriceByName();
-
 }

@@ -62,6 +62,7 @@ public class CustomerDaoImpl implements CustomerDao{
 			cust.setPhoneNo(resultSet.getString("phone_no"));
 			
 		}
+		con.close();
 		return cust;
 	}
 
